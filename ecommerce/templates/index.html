@@ -12,33 +12,33 @@
     	    		<div class="col-md-6">
     	    			<div class="about-img">
     	    				<button class="new_bt">New</button>
-    	    				<div class="shoes-img"><img src="images/shoes-img1.png"></div>
+    	    				<div class="shoes-img"><img src="{{ url_for('static', filename='images/shoes-img1.png')}}"></div>
     	    				<p class="sport_text">Men Sports</p>
     	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
     	    					</ul>
     	    				</div>
     	    			</div>
-    	    			<button class="seemore_bt">See More</button>
+                <a href='{{ url_for('store.shoes') }}'><button class="seemore_bt">See More</button></a>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
-    	    				<div class="shoes-img2"><img src="images/shoes-img2.png"></div>
+    	    				<div class="shoes-img2"><img src="{{ url_for('static', filename='images/shoes-img2.png')}}"></div>
     	    				<p class="sport_text">Men Sports</p>
     	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
     	    					</ul>
     	    				</div>
     	    			</div>
@@ -58,12 +58,12 @@
     		<div class="racing_shoes">
     			<div class="row">
     				<div class="col-md-8">
-    					<div class="shoes-img3"><img src="images/shoes-img3.png"></div>
+    					<div class="shoes-img3"><img src="{{ url_for('static', filename='images/shoes-img3.png')}}"></div>
     				</div>
     				<div class="col-md-4">
     					<div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span> <br>SHOES</strong></div>
     					<div class="number_text"><strong>$ <span style="color: #0a0506">100</span></strong></div>
-    					<button class="seemore">See More</button>
+                <a href='{{ url_for('store.shoes') }}'><button class="seemore_bt">See More</button></a>
     				</div>
     			</div>
     		</div>
@@ -83,15 +83,15 @@
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Best Shoes </p>
-    					<div class="shoes_icon"><img src="images/shoes-img4.png"></div>
+    					<div class="shoes_icon"><img src="{{ url_for('static', filename='images/shoes-img4.png')}}"></div>
     					<div class="star_text">
     						<div class="left_part">
     							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
     	    					</ul>
     						</div>
     						<div class="right_part">
@@ -103,15 +103,15 @@
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Best Shoes </p>
-    					<div class="shoes_icon"><img src="images/shoes-img5.png"></div>
+    					<div class="shoes_icon"><img src="{{ url_for('static', filename='images/shoes-img5.png')}}"></div>
     					<div class="star_text">
     						<div class="left_part">
     							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
     	    					</ul>
     						</div>
     						<div class="right_part">
@@ -123,15 +123,15 @@
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Best Shoes </p>
-    					<div class="shoes_icon"><img src="images/shoes-img6.png"></div>
+    					<div class="shoes_icon"><img src="{{ url_for('static', filename='images/shoes-img6.png')}}"></div>
     					<div class="star_text">
     						<div class="left_part">
     							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
     	    					</ul>
     						</div>
     						<div class="right_part">
@@ -145,15 +145,15 @@
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Sports Shoes</p>
-    					<div class="shoes_icon"><img src="images/shoes-img7.png"></div>
+    					<div class="shoes_icon"><img src="{{ url_for('static', filename='images/shoes-img7.png')}}"></div>
     					<div class="star_text">
     						<div class="left_part">
     							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
     	    					</ul>
     						</div>
     						<div class="right_part">
@@ -165,15 +165,15 @@
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Sports Shoes</p>
-    					<div class="shoes_icon"><img src="images/shoes-img8.png"></div>
+    					<div class="shoes_icon"><img src="{{ url_for('static', filename='images/shoes-img8.png')}}"></div>
     					<div class="star_text">
     						<div class="left_part">
     							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
     	    					</ul>
     						</div>
     						<div class="right_part">
@@ -185,15 +185,15 @@
     			<div class="col-sm-4">
     				<div class="best_shoes">
     					<p class="best_text">Sports Shoes</p>
-    					<div class="shoes_icon"><img src="images/shoes-img9.png"></div>
+    					<div class="shoes_icon"><img src="{{ url_for('static', filename='images/shoes-img9.png')}}"></div>
     					<div class="star_text">
     						<div class="left_part">
     							<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
+    	    						<li><a href="#"><img src="{{ url_for('static', filename='images/star-icon.png')}}"></a></li>
     	    					</ul>
     						</div>
     						<div class="right_part">
@@ -220,25 +220,25 @@
     				<div class="email_box">
                     <div class="input_main">
                        <div class="container">
-                          <form action="/action_page.php">
+                          <form action="{{ url_for('store.index' ) }}" method='POST'>
                             <div class="form-group">
                               <input type="text" class="email-bt" placeholder="Name" name="Name">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone Numbar" name="Name">
+                              <input type="text" class="email-bt" placeholder="Phone Number" name="Name">
                             </div>
                             <div class="form-group">
                               <input type="text" class="email-bt" placeholder="Email" name="Email">
                             </div>
                             
                             <div class="form-group">
-                                <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                                <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
                             </div>
-                          </form>   
                        </div> 
                        <div class="send_btn">
                         <button class="main_bt">Send</button>
                        </div>                   
+                          </form>   
                     </div>
     		</div>
     			</div>

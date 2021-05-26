@@ -15,12 +15,12 @@
     		<div class="racing_shoes">
     			<div class="row">
     				<div class="col-md-8">
-    					<div class="shoes-img3"><img src="images/shoes-img3.png"></div>
+    					<div class="shoes-img3"><img src="{{ url_for('static', filename='images/shoes-img3.png')}}"></div>
     				</div>
     				<div class="col-md-4">
     					<div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span> <br>SHOES</strong></div>
     					<div class="number_text"><strong>$ <span style="color: #0a0506">100</span></strong></div>
-    					<button class="seemore">See More</button>
+              <a href='{{ url_for('store.shoes') }}'>	<button class="seemore">See More</button></a>
     				</div>
     			</div>
     		</div>

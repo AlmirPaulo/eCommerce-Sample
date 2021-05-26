@@ -2,6 +2,12 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os, logging
 
+
+#Set up logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
+
 app = Flask(__name__)
 
 db = SQLAlchemy()

@@ -1,10 +1,17 @@
 from . import views
 from flask import Blueprint
+import logging
 
+
+#Set up logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
 
 store = Blueprint('store', __name__)
 
-@store.route('/')
+
+@store.route('/', methods=['GET', 'POST'])
 def index():
     return views.index()
 
@@ -12,7 +19,7 @@ def index():
 def collection():
     return views.collection()
 
-@store.route('contact')
+@store.route('contact', methods=['GET', 'POST'])
 def contact():
     return views.contact()
 
@@ -20,3 +27,6 @@ def contact():
 def racing_boots():
     return views.racing_boots()
 
+@store.route('shoes')
+def shoes():
+    return views.shoes()

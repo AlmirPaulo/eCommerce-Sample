@@ -159,7 +159,7 @@
 					<div class="col-sm-5">
 						<div class="shoes_img"><img src="{{ url_for('static', filename='images/running-shoes.png') }}"></div>
 					</div>
-				</div> {{ url_for('static', filename='images/running-shoes.png') }}
+				</div>
                 </div>
             </div>
         </div>
@@ -177,21 +177,21 @@
     		<div class="mail_section">
     			<div class="row">
     				<div class="col-sm-6 col-lg-2">
-    					<div><a href="#"><img src="images/footer-logo.png"></a></div>
+    					<div><a href="#"><img src="{{ url_for('static', filename='images/footer-logo.png') }}"></a></div>
     				</div>
     				<div class="col-sm-6 col-lg-2">
-    					<div class="footer-logo"><img src="images/phone-icon.png"><span class="map_text">(71) 1234567890</span></div>
+    					<div class="footer-logo"><img src="{{ url_for('static', filename='images/phone-icon.png') }}"><span class="map_text">(71) 1234567890</span></div>
     				</div>
     				<div class="col-sm-6 col-lg-3">
-    					<div class="footer-logo"><img src="images/email-icon.png"><span class="map_text">Demo@gmail.com</span></div>
+    					<div class="footer-logo"><img src="{{ url_for('static', filename='images/email-icon.png') }}"><span class="map_text">Demo@gmail.com</span></div>
     				</div>
     				<div class="col-sm-6 col-lg-3">
     					<div class="social_icon">
     						<ul>
-    							<li><a href="#"><img src="images/fb-icon.png"></a></li>
-    							<li><a href="#"><img src="images/twitter-icon.png"></a></li>
-    							<li><a href="#"><img src="images/in-icon.png"></a></li>
-    							<li><a href="#"><img src="images/google-icon.png"></a></li>
+    							<li><a href="#"><img src="{{ url_for('static', filename='images/fb-icon.png') }}"></a></li>
+    							<li><a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}"></a></li>
+    							<li><a href="#"><img src="{{ url_for('static', filename='images/in-icon.png') }}"></a></li>
+    							<li><a href="#"><img src="{{ url_for('static', filename='images/google-icon.png') }}"></a></li>
     						</ul>
     					</div>
     				</div>
@@ -205,7 +205,7 @@
     		        </div>
     		        <div class="col-sm-4 col-lg-2">
     		        	<h2 class="shop_text">Address </h2>
-    		        	<div class="image-icon"><img src="images/map-icon.png"><span class="pet_text">No 40 Baria Sreet 15/2 NewYork City, NY, United States.</span></div>
+    		        	<div class="image-icon"><img src="{{ url_for('static', filename='images/map-icon.png') }}"><span class="pet_text">No 40 Baria Sreet 15/2 NewYork City, NY, United States.</span></div>
     		        </div>
     		        <div class="col-sm-4 col-md-6 col-lg-3">
     				    <h2 class="shop_text">Our Company </h2>
@@ -241,24 +241,23 @@
     			</div>
     	        </div> 
 	        </div>
-    	</div>
     </div>
 	<!-- section footer end -->
-	<div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></div>
+	<div class="copyright">2019 All Rights Reserved. <a href="{{ 'https://html.design' }}">Free html  Templates</a></div>
 
 
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/plugin.js') }}"></script>
       <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="{{ url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
       <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+      <script src="{{ 'https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js' }}"></script>
       <script>
          $(document).ready(function(){
          $(".fancybox").fancybox({
