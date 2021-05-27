@@ -30,3 +30,11 @@ def racing_boots():
 @store.route('shoes')
 def shoes():
     return views.shoes()
+
+@store.route('/register', methods=['GET', 'POST'])
+def register():
+    return views.register()
+
+@store.route('/login', methods=['GET', 'POST'])
+def login():
+    return views.login()

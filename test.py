@@ -16,7 +16,7 @@ def test_log_debug_mode(module):
     assert module.logger.level == 10
     #assert module.logger.level != 10
 
-@pytest.mark.parametrize('route',['/','/contact', '/collection', '/racing_boots' ])
+@pytest.mark.parametrize('route',['/','/contact', '/collection', '/racing_boots' , '/register', '/login'])
 def test_routes(route):
     url = 'http://127.0.0.1:5000'+route
     resp = urllib.request.urlopen(url)
