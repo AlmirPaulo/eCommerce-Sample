@@ -23,7 +23,12 @@ def register():
         passwd = request.form.get('pass') 
         passwd_conf = request.form.get('conf-pass') 
         email = request.form.get('email') 
-        abc = 'qwertyuiopasdfghjkl;zxcvbnm'
+        abc = 'qwertyuiopasdfghjklzxcvbnm'
+        num = '0123456789'
+        
+        def is_symbol(character):
+            if character not in abc and character not in num:
+                return True
 
         #validation
         if len(username) < 3:
@@ -34,12 +39,14 @@ def register():
             flash('Your password is too short',category='error')
         elif len(passwd) > 30:
             flash('Your password is too long', category='error')
-        elif '0123456789' not in passwd:
+        elif not any(i in passwd for i in num):
             flash('Your password should be alphanumeric, but it has no numbers', category='error')
-        elif abc not in passwd:
+        elif not any(i in passwd for i in abc):
             flash('Your password should be alphanumeric, but it has no lowercase letters',category='error')
-        elif abc.upper() not in passwd:
+        elif not any(i in passwd for i in abc.upper()):
             flash('Your passoword have not uppercase letters', category='error')
+        elif not any(is_symbol(i) for i in passwd):
+            flash('Your password should have at least one symbol', category='error')
         elif '@' not in email or '.' not in email:
             flash('This email, seems not legit...', category='error')
         #add new user to db
@@ -75,4 +82,4 @@ def login():
 #Colocar botao para logout em algum lugar
 @auth.route('/logout')
 def logout():
-    return redirect(url_for('store.indexi'))
+    return redirect(url_for('store.index'))
