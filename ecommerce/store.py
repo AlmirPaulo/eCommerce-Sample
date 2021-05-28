@@ -1,4 +1,5 @@
 from . import views
+from flask_login import login_required
 from flask import Blueprint
 import logging
 
@@ -31,10 +32,8 @@ def racing_boots():
 def shoes():
     return views.shoes()
 
-@store.route('/register', methods=['GET', 'POST'])
-def register():
-    return views.register()
-
-@store.route('/login', methods=['GET', 'POST'])
-def login():
-    return views.login()
+@store.route('/cart')
+@login_required
+def cart():
+    pass
+#criar pagina, procurar uma api que de conta da compra e o bootstrap acho que tem um apagina de cart

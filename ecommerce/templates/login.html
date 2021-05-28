@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<form class='p-3' action="{{ url_for('store.login') }}" method='POST'>
+<form class='p-3' action="{{ url_for('auth.login') }}" method='POST'>
     <h1>Login</h1>
     <input class="form-control" type="text" name='login' placeholder='Username or Email' required>
      <input class="form-control" type="text" name='pass' placeholder='Password' required>
@@ -9,5 +9,6 @@
      <br>
      <button class="btn btn-primary">Login</button>
    </div>
+
 </form>
 {% endblock %}
