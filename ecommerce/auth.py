@@ -2,7 +2,7 @@ from flask import flash, request, redirect, Blueprint, url_for
 from . import db, views, models, store
 from .models import User 
 from werkzeug.security import check_password_hash, generate_password_hash
-from flask_login import login_user, logout_user, current_user 
+from flask_login import login_user, logout_user, current_user, login_required 
 import logging
 
 
@@ -55,17 +55,21 @@ def register():
             db.session.add(new_user)
             db.session.commit()
             flash('Congratulations! You are registered, now you can start to buy!', category='success')
-    #como logar automaticamente?
+            login_user(new_user, remember=True)
     return views.register()
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         #variables
-        username = request.form.get('username')
         passwd = request.form.get('pass')
+        login = request.form.get('login')
+        try:
                     #SqlAlchemy stuff
-        user = User.query.filter_by(username=username).first()
+            user = User.query.filter_by(username=login).first()
+        except:
+            user = User.query.filter_by(email=login).first()
+
         if user:
             if check_password_hash(user.password, passwd):
                 flash('Logged in succesfully!', category='success')
@@ -74,12 +78,21 @@ def login():
             else:
                 flash('Incorrect password', category='error')
         else:
-            flash('Username does not exist', category='error')
+            flash('User does not exist', category='error')
     return views.login()
 
 #criar pagina, procurar uma api que de conta da compra e o bootstrap acho que tem um apagina de cart
 
+
+@auth.route('/new_password', methods=['GET', 'POST'])
+def new_password():
+    return views.new_password()
+
+
 #Colocar botao para logout em algum lugar
 @auth.route('/logout')
+@login_required
 def logout():
+    logout_user()
     return redirect(url_for('store.index'))
+

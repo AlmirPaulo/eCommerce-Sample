@@ -13,8 +13,9 @@ A sample of an eCommerce website with all kind of functionalities. More precisel
 * Remove products of your cart 
 * Simulate a payment (despite the fact I take serious practices for security, I **DO NOT** recommend you pass any kind of sensitive information. I will not take any kind of responsability for any trouble in this matter. Remember, this is just a sample...) 
 * Send an email (it will actually goes back to your email address)
-* Sign the Newsletter (same thing)
+* Sign the Newsletter (Just a single sample)
 * Log out
+* "Forgot your password" functionality
 
 ## Technology Stack
 * Python
@@ -24,8 +25,8 @@ A sample of an eCommerce website with all kind of functionalities. More precisel
 * Flask
 * Flask-SQLAlchemy
 * Flask-Login
+* Flask-Mail
 * SQLite3
-* Bootstrap 4 
 * Docker
 * Gunicorn
 * Nginx (as reverse proxy)

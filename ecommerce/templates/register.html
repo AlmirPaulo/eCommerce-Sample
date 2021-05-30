@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<form class='p-3' action="{{ url_for('auth.register') }}" method='POST'>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="layout_padding">
+    <form class='p-3' action="{{ url_for('auth.register') }}" method='POST'>
     <h1>Register Now!</h1>
     <input class="form-control" type="text" name='username' placeholder='Username' required>
      <input class="form-control" type="text" name='email' placeholder='Email' required>
@@ -9,7 +14,6 @@
  <input class="form-control" type="password" name='conf-pass' placeholder='Confirm Password' required>
      <br>
      <button class="btn btn-primary">Register</button>
-   </div>
      {% with msgs = get_flashed_messages(with_categories=True) %}
         {% if msgs %}   
             {% for category, msg in msgs %}
@@ -23,5 +27,7 @@
             {% endfor %}
         {% endif %}
      {% endwith %}
-</form>
+    </form>
+</div>
+
 {% endblock %}

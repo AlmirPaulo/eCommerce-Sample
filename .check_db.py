@@ -3,7 +3,7 @@ import sqlite3
 
 conn = sqlite3.connect('ecommerce/db.sqlite3')
 c = conn.cursor()
-table = 'shoe' 
+table = 'user' 
 
 c.execute('SELECT * FROM '+table)
 data = c.fetchall()

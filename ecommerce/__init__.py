@@ -1,3 +1,5 @@
+#https://flask-mail.readthedocs.io/en/latest/
+#https://www.youtube.com/watch?v=48Eb8JuFuUI
 from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
@@ -41,6 +43,7 @@ def create_app():
     login_manager.login_view = 'auth.login' #?
     login_manager.init_app(app)
     
+    from .models import User
     #Important!
     @login_manager.user_loader
     def load_user(id):

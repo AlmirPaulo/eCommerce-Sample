@@ -20,3 +20,6 @@ def register():
 
 def login():
     return render_template('login.html')
+
+def new_password():
+    return render_template('new_password.html')

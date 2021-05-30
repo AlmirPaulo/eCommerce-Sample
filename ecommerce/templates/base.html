@@ -49,125 +49,24 @@
                         <div class="navbar-nav">
                            <a class="nav-item nav-link" href="{{ url_for('store.index', _external=True) }}">Home</a>
                            <a class="nav-item nav-link" href="{{ url_for('store.collection', _external=True) }}">Collection</a>
-													<!-- <a class="nav-item nav-link" href="">Shoes</a>-->
+													 <a class="nav-item nav-link" href="{{ url_for('store.shoes', _external=True) }}">Shoes</a>
                            <a class="nav-item nav-link" href="{{ url_for('store.racing_boots', _external=True) }}">Racing Boots</a>
                            <a class="nav-item nav-link" href="{{ url_for('store.contact', _external=True) }}">Contact</a>
-                           <!--Essa search...-->
-                           <a class="nav-item nav-link last" href="#"><img src="{{ url_for('static', filename='images/search_icon.png') }}"></a>
                            <a class="nav-item nav-link last" href="{{ url_for('store.index', _external=True) }}"><img src="{{ url_for('static', filename='images/shop_icon.png') }}
 "></a>
+                           {% if current_user.is_authenticated %} 
+                            <a class="nav-item nav-link last" href="{{ url_for('auth.logout', _external=True) }}"><button class="btn btn-outline-danger">Logout</button></a>
+                            {% else %}
+                            <a class="nav-item nav-link last" href="{{ url_for('auth.login', _external=True) }}"><button class="btn btn-outline-primary">Login</button></a>
+                            {% endif %}
                         </div>
                     </div>               
-                    
           </nav>
+          <!--search bar-->
+          <input class="bg-dark" style='border-radius:20%;' type="text" placeholder='Search'>
 				</div>
 			</div>
 		</div>
-		<div class="banner_section">
-			<div class="container-fluid">
-				<section class="slide-wrapper">
-    <div class="container-fluid">
-	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-					<div class="col-sm-2 padding_0">
-						<p class="mens_taital">Men Shoes</p>
-						<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
-					</div>
-					<div class="col-sm-5">
-						<div class="banner_taital">
-							<h1 class="banner_text">New Running Shoes </h1>
-							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-							<p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
-						</div>
-					</div>
-					<div class="col-sm-5">
-						<div class="shoes_img"><img src="{{ url_for('static', filename='images/running-shoes.png') }}"></div>
-					</div>
-				</div>                 </div>
-                <div class="carousel-item">
-                    <div class="row">
-					<div class="col-sm-2 padding_0">
-						<p class="mens_taital">Men Shoes</p>
-						<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
-					</div>
-					<div class="col-sm-5">
-						<div class="banner_taital">
-							<h1 class="banner_text">New Running Shoes </h1>
-							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-							<p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
-						</div>
-					</div>
-					<div class="col-sm-5">
-						<div class="shoes_img"><img src="{{ url_for('static', filename='images/running-shoes.png') }}"></div>
-					</div>
-				</div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-					<div class="col-sm-2 padding_0">
-						<p class="mens_taital">Men Shoes</p>
-						<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
-					</div>
-					<div class="col-sm-5">
-						<div class="banner_taital">
-							<h1 class="banner_text">New Running Shoes </h1>
-							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-							<p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
-						</div>
-					</div>
-					<div class="col-sm-5">
-						<div class="shoes_img"><img src="{{ url_for('static', filename='images/running-shoes.png') }}"></div>
-					</div>
-				</div> 
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-					<div class="col-sm-2 padding_0">
-						<p class="mens_taital">Men Shoes</p>
-						<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
-					</div>
-					<div class="col-sm-5">
-						<div class="banner_taital">
-							<h1 class="banner_text">New Running Shoes </h1>
-							<h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-							<p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							<button class="buy_bt">Buy Now</button>
-							<button class="more_bt">See More</button>
-						</div>
-					</div>
-					<div class="col-sm-5">
-						<div class="shoes_img"><img src="{{ url_for('static', filename='images/running-shoes.png') }}"></div>
-					</div>
-				</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>			
-			</div>
-		</div>
-	</div>
 	<!-- header section end -->
   {% block body %}  {% endblock %}
 
