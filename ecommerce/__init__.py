@@ -1,6 +1,7 @@
 #https://flask-mail.readthedocs.io/en/latest/
 #https://www.youtube.com/watch?v=48Eb8JuFuUI
 from flask import Flask
+from flask_mail import Mail
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 import os, logging
@@ -12,8 +13,9 @@ logger.setLevel(logging.DEBUG)
 logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
 
 app = Flask(__name__)
-
 db = SQLAlchemy()
+mail = Mail()
+
 
 #Factory
 def create_app():
@@ -23,6 +25,9 @@ def create_app():
 
     #Initiate database
     db.init_app(app)
+
+    #Initiate email functions
+    mail.init_app(app)
 
     #create database
     def create_db(app):
