@@ -12,22 +12,29 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 logging.basicConfig(filename='server.log', format='%(asctime)s:%(module)s:%(levelname)s:%(message)s')
 
+#Variables
 app = Flask(__name__)
 db = SQLAlchemy()
 mail = Mail()
 
+email = open('note_email', 'r').read()
+password = open('note_password', 'r').read()
 
 #Factory
 def create_app():
     from . import models, views, auth, store
+    #Configurations
     app.config['SECRET_KEY'] = 'some really really secret key'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
-
+    #app.config['MAIL_SERVER'] = 'smtp.gmail.com' #While commented this is localhost
+    app.config['MAIL_PORT'] = 465
+    app.config['MAIL_USE_TLS'] = True
+    app.config['MAIL_USERNAME'] = email
+    app.config['MAIL_PASSWORD'] = password
+    app.config['MAIL_DEFAULT_SENDER'] = email
+    
     #Initiate database
     db.init_app(app)
-
-    #Initiate email functions
-    mail.init_app(app)
 
     #create database
     def create_db(app):
@@ -36,6 +43,8 @@ def create_app():
 
     create_db(app)
 
+    #Initiate email functions
+    mail.init_app(app)
 
     #Blueprints register
     from .store import store
@@ -45,7 +54,7 @@ def create_app():
 
     #Set Up Login Manager
     login_manager = LoginManager()
-    login_manager.login_view = 'auth.login' #?
+    login_manager.login_view = 'auth.login' 
     login_manager.init_app(app)
     
     from .models import User

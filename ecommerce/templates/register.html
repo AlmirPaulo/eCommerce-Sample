@@ -5,13 +5,13 @@
 			</div>
 		</div>
 	</div>
+    <div class="collection_text mb-2">Register Now!</div>
 <div class="layout_padding">
-    <form class='p-3' action="{{ url_for('auth.register') }}" method='POST'>
-    <h1>Register Now!</h1>
-    <input class="form-control" type="text" name='username' placeholder='Username' required>
-     <input class="form-control" type="text" name='email' placeholder='Email' required>
-     <input class="form-control" type="password" name='pass' placeholder='Password' required>
- <input class="form-control" type="password" name='conf-pass' placeholder='Confirm Password' required>
+    <center><form class='p-3' action="{{ url_for('auth.register') }}" method='POST'>
+    <input class="form-control" type="text" name='username' placeholder='Username' required style="width:30%">
+     <input class="form-control mt-1" type="text" name='email' placeholder='Email' required style="width:30%">
+     <input class="form-control mt-1" type="password" name='pass' placeholder='Password' required style="width:30%" style="width:30%">
+ <input class="form-control mt-1" type="password" name='conf-pass' placeholder='Confirm Password' required style="width:30%">
      <br>
      <button class="btn btn-primary">Register</button>
      {% with msgs = get_flashed_messages(with_categories=True) %}
@@ -27,7 +27,7 @@
             {% endfor %}
         {% endif %}
      {% endwith %}
-    </form>
+        </form></center>
 </div>
 
 {% endblock %}

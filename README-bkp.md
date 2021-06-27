@@ -22,6 +22,7 @@ A sample of an eCommerce website with all kind of functionalities. More precisel
 * Javascript
 * HTML
 * CSS
+* Bootstrap
 * Flask
 * Flask-SQLAlchemy
 * Flask-Login
@@ -30,6 +31,9 @@ A sample of an eCommerce website with all kind of functionalities. More precisel
 * Docker
 * Gunicorn
 * Nginx (as reverse proxy)
+
+## Final Considerations
+My intent in this sample  was to build a functional and complete server for a ecommerce-like website. I do not care too much to the front-end, interface, and client side issues. Of couse all this points are important, but these are not the points where I focus on. 
 
 ## Credits
 This project uses [Pullo](https://html.design/download/pullo-shoes-shop-template/), an HTML/CSS template by [html design](https://html.design/) under [CC-By 4.0 license](https://creativecommons.org/licenses/by/4.0/). Although I have made  some alterations. 
